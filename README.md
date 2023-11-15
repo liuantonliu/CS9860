@@ -6,13 +6,27 @@
 - future: cycleGAN
 
 # training sets:
+## baseline: vgg19, content_layers = ['conv_4'], style_layers = ['conv_1', 'conv_2', 'conv_3', 'conv_4', 'conv_5'], epoch = 50
+
 ## different models (also no difference)
-vgg16,19, squeezenet, alexnet..
+vgg16, vgg19, squeezenet, alexnet
+
 ## different epochs
-2, 5, 10, 20, 50, 100, 200?
+10, 20, 50, 100, 200
+
 ## different content layers (even though they make no difference)
-1, 5, 10, 12345,
+- ['conv_1']
+- ['conv_4']
+- ['conv_10']
+- ['conv_1', 'conv_2', 'conv_3', 'conv_4', 'conv_5']
+
 ## different level of style layers
-1,2,3,4,5,6,7
+- ['conv_1', 'conv_2', 'conv_3', 'conv_4', 'conv_5']
+- ['conv_3', 'conv_4', 'conv_5', 'conv_6', 'conv_7']
+- ['conv_5', 'conv_6', 'conv_7', 'conv_8', 'conv_9']
+  
 ## different amount of style layers
-1234567,123456,345,4
+- ['conv_1', 'conv_2', 'conv_3', 'conv_4', 'conv_5']
+- ['conv_1', 'conv_2', 'conv_3', 'conv_4', 'conv_5', 'conv_6', 'conv_7', 'conv_8', 'conv_9']
+- ['conv_1']
+- ['conv_5']
